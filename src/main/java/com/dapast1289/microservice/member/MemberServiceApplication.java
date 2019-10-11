@@ -1,4 +1,4 @@
-package com.dapast1289.service.member;
+package com.dapast1289.microservice.member;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

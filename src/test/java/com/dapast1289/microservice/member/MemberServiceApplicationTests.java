@@ -1,4 +1,4 @@
-package com.dapast1289.service.member;
+package com.dapast1289.microservice.member;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
