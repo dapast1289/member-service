@@ -1,0 +1,1 @@
+INSERT INTO `member` (`id`, `name`, `account`, `password`, `create_time`, `update_time`) VALUES (1, 'Leo Chen', 'leo', 'leo123', now(), now());
