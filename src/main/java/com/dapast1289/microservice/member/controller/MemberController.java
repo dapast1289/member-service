@@ -20,9 +20,9 @@ public class MemberController {
     @Autowired
     private MemberService memberService;
 
-    @ApiOperation(value = "get all member list", notes = "")
+    @ApiOperation(value = "get all member list")
     @GetMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<MemberEntity>> index() {
+    public ResponseEntity<List<MemberEntity>> getMemberList() {
         List<MemberEntity> allMembers = memberService.getAll();
         return new ResponseEntity<>(allMembers, HttpStatus.OK);
     }
