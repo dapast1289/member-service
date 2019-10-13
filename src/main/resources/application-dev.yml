@@ -1,13 +1,8 @@
 server:
   port: 8080
 
-spring:
-  boot:
-    admin:
-      url: http://localhost:8000
-management:
-  security:
-    enabled: false
+spring.boot.admin.client.url: http://localhost:8000
+management.security.enabled: false
 
 datasource:
   driver-class-name: org.h2.Driver
