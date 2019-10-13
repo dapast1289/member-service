@@ -1,7 +1,16 @@
 server:
   port:
 
-spring.boot.admin.client.url: https://micro-service-admin-service.herokuapp.com
+spring:
+  boot:
+    admin:
+      client:
+        url: https://micro-service-admin-service.herokuapp.com
+        instance:
+          management-base-url: ${spring.boot.admin.client.url}
+          service-base-url: ${spring.boot.admin.client.url}
+        auto-deregistration: true
+        period: 5s
 management.security.enabled: false
 
 datasource:
