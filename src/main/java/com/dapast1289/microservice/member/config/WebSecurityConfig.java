@@ -9,16 +9,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        http
-//                .csrf().disable();
-//        http
-//                .authorizeRequests()
-//                .antMatchers("/swagger-ui.html")
-//                .permitAll();
-//        http
-//                .authorizeRequests()
-//                .antMatchers("/**")
-//                .authenticated();
-//        http.httpBasic();
+        http
+                .csrf().disable();
+        http
+                .authorizeRequests()
+                .antMatchers("/swagger-ui.html")
+                .permitAll();
+        http
+                .authorizeRequests()
+                .antMatchers("/**")
+                .authenticated();
+        http.httpBasic();
     }
 }

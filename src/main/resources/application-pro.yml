@@ -17,16 +17,15 @@ spring:
         instance:
           management-base-url: https://micro-service-member-service.herokuapp.com
           service-base-url: ${spring.boot.admin.client.instance.management-base-url}
+          metadata:
+            user.name: ${security.user.name}
+            user.password: ${security.user.password}
         auto-deregistration: true
         period: 5s
-        metadata:
-          user.name: ${spring.security.user.name}
-          user.password: ${spring.security.user.password}
-  security:
-    user:
-      name: admin
-      password: admin
+  security.user:
+    name: admin
+    password: admin
 management:
-  security.enabled: false
+  security.enabled: true
   endpoints.web.exposure.include: '*'
   endpoint.health.show-details: ALWAYS
