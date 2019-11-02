@@ -14,9 +14,9 @@ spring:
     admin:
       client:
         url: http://localhost:8000
-        instance:
-          management-base-url: ${spring.boot.admin.client.url}
-          service-base-url: ${spring.boot.admin.client.url}
+#        instance:
+#          management-base-url: ${spring.boot.admin.client.url}
+#          service-base-url: ${spring.boot.admin.client.url}
         auto-deregistration: true
         period: 5s
         metadata:
@@ -26,4 +26,7 @@ spring:
     user:
       name: admin
       password: admin
-  management.security.enabled: true
+management:
+  security.enabled: false
+  endpoints.web.exposure.include: '*'
+  endpoint.health.show-details: ALWAYS
