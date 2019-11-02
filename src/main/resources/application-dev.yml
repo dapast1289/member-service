@@ -15,8 +15,8 @@ spring:
       client:
         url: http://localhost:8000
         instance:
-          management-base-url: ${spring.boot.admin.client.url}
-          service-base-url: ${spring.boot.admin.client.url}
+          management-base-url:
+          service-base-url:
         auto-deregistration: true
         period: 5s
         metadata:

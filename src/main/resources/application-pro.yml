@@ -15,8 +15,8 @@ spring:
       client:
         url: https://micro-service-admin-service.herokuapp.com
         instance:
-          management-base-url: ${spring.boot.admin.client.url}
-          service-base-url: ${spring.boot.admin.client.url}
+          management-base-url: https://micro-service-member-service.herokuapp.com
+          service-base-url: ${spring.boot.admin.client.instance.management-base-url}
         auto-deregistration: true
         period: 5s
         metadata:
