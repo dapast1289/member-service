@@ -1,7 +1,15 @@
 server:
   port: 8080
+logging:
+  level:
+    org.woodwhale.king: DEBUG
 
 spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;MODE=MySQL;DB_CLOSE_DELAY=-1
+    initialize: true
+    sql-script-encoding: UTF-8
   boot:
     admin:
       client:
@@ -11,10 +19,11 @@ spring:
           service-base-url: ${spring.boot.admin.client.url}
         auto-deregistration: true
         period: 5s
-management.security.enabled: false
-
-datasource:
-  driver-class-name: org.h2.Driver
-  url: jdbc:h2:mem:test;MODE=MySQL;DB_CLOSE_DELAY=-1
-  initialize: true
-  sql-script-encoding: UTF-8
+        metadata:
+          user.name: ${spring.security.user.name}
+          user.password: ${spring.security.user.password}
+  security:
+    user:
+      name: admin
+      password: admin
+  management.security.enabled: true
